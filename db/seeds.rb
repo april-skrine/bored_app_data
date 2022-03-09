@@ -1,5 +1,6 @@
 Activity.destroy_all
 Mood.destroy_all
+Comment.destroy_all
 
 puts "🌱 Seeding spices..."
 
@@ -209,5 +210,11 @@ Activity.create(activity_name: "Dirty Sixth",
                 mood: Mood.all[4],
                 favorite: true
                 )
+
+Comment.create(
+    user_name: "lorenzo",
+    user_comment: "what a place!",
+    activity: Activity.find(1) 
+    )
 
 puts "✅ Done seeding!"

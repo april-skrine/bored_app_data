@@ -8,6 +8,7 @@ class ActivitiesController < ApplicationController
     get '/activities/:id' do
         activity = Activity.find(params[:id])
     end
+    
     get '/activities/favorites' do 
         activities = Activity.all.where(:favorite => true)
         activities.to_json()

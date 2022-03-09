@@ -15,4 +15,5 @@ use Rack::JSONBodyParser
 run ApplicationController
 use MoodsController
 use ActivitiesController
+use CommentsController
 

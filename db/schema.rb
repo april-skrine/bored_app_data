@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_08_221904) do
+ActiveRecord::Schema.define(version: 2022_03_09_151700) do
 
   create_table "activities", force: :cascade do |t|
     t.string "activity_name"
@@ -18,15 +18,16 @@ ActiveRecord::Schema.define(version: 2022_03_08_221904) do
     t.text "description"
     t.boolean "favorite"
     t.integer "mood_id"
-    t.boolean "is_favorited?"
     t.index ["mood_id"], name: "index_activities_on_mood_id"
   end
 
   create_table "comments", force: :cascade do |t|
     t.string "user_name"
     t.text "user_comment"
+    t.integer "activity_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["activity_id"], name: "index_comments_on_activity_id"
   end
 
   create_table "moods", force: :cascade do |t|
