@@ -217,4 +217,10 @@ Comment.create(
     activity: Activity.find(1) 
     )
 
+Comment.create(
+    user_name: "lorenzo",
+    user_comment: "what a place!",
+    activity: Activity.find(1) 
+    )
+
 puts "✅ Done seeding!"
