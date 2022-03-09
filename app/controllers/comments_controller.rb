@@ -1,7 +1,12 @@
 class CommentsController < ApplicationController
 
-    get '/comments/:activity' do
-        comments = Comment.all.where(params[:activity])
+    get '/comments' do
+        comments = Comment.all
+        comments.to_json(only: [:user_name, :user_comment])
+    end
+
+    get '/comments/:activity_id' do
+        comments = Comment.all.where(activity_id: params[:activity_id])
         comments.to_json(only: [:user_name, :user_comment])
     end
 
@@ -9,7 +14,7 @@ class CommentsController < ApplicationController
         Comment.create(
             user_name: params[:user_name],
             user_comment: params[:user_comment],
-            activity: params[:activity] 
+            activity_id: params[:activity_id] 
         ).to_json()
     end
 

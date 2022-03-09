@@ -6,7 +6,8 @@ class ActivitiesController < ApplicationController
     end
 
     get '/activities/:id' do
-        activity = Activity.find(params[:id])
+        activity = Activity.all.where(id: params[:id])
+        activity.to_json()
     end
     
     get '/activities/favorites' do 
