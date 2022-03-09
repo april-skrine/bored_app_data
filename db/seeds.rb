@@ -83,7 +83,7 @@ Activity.create(activity_name: "Bat Watching at Congress Avenue Bridge",
 
 
 Activity.create(activity_name: "Austin Flyboard", 
-                img_url: "https://laketravis.com/lake-travis/lake-travis-flyboard/gallery/#https://laketravis.com/lake-travis/lake-travis-flyboard/austin-flyboard-header/", 
+                img_url: "https://cdn.laketravis.com/wp-content/uploads/2016/11/austin-flyboard-header.jpg", 
                 description: "Almost anyone can use a FlyBoard. Young and old, short and tall, big and small, it is really very easy. At Austin FlyBoard we know you want to ‘fly’ and not sit in boring training. That’s why we pride ourselves on minimizing ‘training’ to maximize ‘riding’. Typical first time riders are up and flying in about 15 minutes. Once you master the basics, our instructors can teach you progressively more difficult manuvers. It is all up to you how far you want to go.", 
                 mood: Mood.all[1],
                 favorite: false
