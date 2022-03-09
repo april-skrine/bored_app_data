@@ -6,7 +6,7 @@ class ActivitiesController < ApplicationController
     end
 
     get '/activities/:id' do
-        activity = Activity.all.where(id: params[:id])
+        activity = Activity.find(params[:id])
         activity.to_json()
     end
     
