@@ -1,6 +1,5 @@
 Activity.destroy_all
 Mood.destroy_all
-Comment.destroy_all
 
 puts "🌱 Seeding spices..."
 
