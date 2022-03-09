@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
         comments.to_json()
     end
 
-    post '/comments' do
+    post '/comments/activities/:activity_id' do
         Comment.create(
             user_name: params[:user_name],
             user_comment: params[:user_comment],
