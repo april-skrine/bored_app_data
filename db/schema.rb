@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2022_03_08_221904) do
     t.string "activity_name"
     t.string "img_url"
     t.text "description"
+    t.boolean "favorite"
     t.integer "mood_id"
     t.boolean "is_favorited?"
     t.index ["mood_id"], name: "index_activities_on_mood_id"
