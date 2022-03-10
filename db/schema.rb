@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_09_151700) do
+ActiveRecord::Schema.define(version: 2022_03_10_162623) do
 
   create_table "activities", force: :cascade do |t|
     t.string "activity_name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2022_03_09_151700) do
     t.text "description"
     t.boolean "favorite"
     t.integer "mood_id"
+    t.boolean "most_popular?"
     t.index ["mood_id"], name: "index_activities_on_mood_id"
   end
 
